@@ -85,7 +85,7 @@ flowchart TD
 ## 5. 実行方法
 
 ```bash
-source .env_mb/bin/activate
+source .venv_mb/bin/activate
 cd ex002_figure_set
 python run_figures.py
 ```
@@ -120,5 +120,10 @@ python run_figures.py
 ## 7. 表記規則
 
 - データセット中の NB 表記は UFB に統一
-- 図の軸ラベルは英語，単位付き
+- 図の軸ラベルは英語，単位付き（相関ヒートマップと F.I. 図は例外，7.1 参照）
 - 評価 RMSE は標準化後スケール
+
+### 7.1 相関ヒートマップ・F.I. 図の軸表記（例外）
+
+- `correlation_input_target.png` の横軸（目的変数）は `MB conc.` / `UFB conc.` / `Oxygen cont.` の短縮表記とし，縦軸（説明変数）・横軸ともに単位を付けない．表示用のラベル変換は `run_figures.py` の `_build_correlation_display_df` / `_strip_unit` / `CORRELATION_TARGET_SHORT_LABELS` で行い，`tables/input_target_correlation.*` の値・ラベルは変更しない．
+- `feature_importance_*.png` は縦軸ラベルを付けず，横軸を 0〜100 の範囲とし，軸ラベルを `Feature Importance [%]` とする（`figures.py` の `plot_feature_importance` で重要度を 100 倍して描画）．

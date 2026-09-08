@@ -10,13 +10,13 @@ import numpy as np
 import pandas as pd
 
 
-COLOR_BLUE = "#2166AC"
-COLOR_RED = "#B2182B"
-COLOR_CYCLE = [COLOR_BLUE, COLOR_RED]
+COLOR_DARK = "#262626"
+COLOR_LIGHT = "#8C8C8C"
+COLOR_CYCLE = ["#BFBFBF", "#7F7F7F"]
 
 
 def apply_figure_style() -> None:
-    """青・赤配色，最小限の線のみの matplotlib スタイルを適用する．"""
+    """モノクロ（相関ヒートマップを除く），最小限の線のみの matplotlib スタイルを適用する．"""
     plt.rcParams.update(
         {
             "figure.facecolor": "white",
@@ -99,17 +99,17 @@ def plot_feature_importance(
     feature_names: Sequence[str],
     output_path: str | Path,
     figsize: tuple[float, float] = (5.0, 5.0),
-    xlim_max: float = 1.0,
+    xlim_max: float = 100.0,
 ) -> None:
     """
     Random Forest の Feature Importance 棒グラフを描画する．
 
     Args:
-        importances (Sequence[float]): 重要度，shape (n_features,)
+        importances (Sequence[float]): 重要度（0〜1 の割合），shape (n_features,)
         feature_names (Sequence[str]): 説明変数名
         output_path (str | Path): 保存先 PNG パス
         figsize (tuple[float, float]): 図サイズ
-        xlim_max (float): 横軸の最大値（3 目的変数間で揃える）
+        xlim_max (float): 横軸の最大値（%表記，3 目的変数間で揃える）
     """
     apply_figure_style()
     output_path = Path(output_path)
@@ -117,10 +117,10 @@ def plot_feature_importance(
 
     order = np.argsort(importances)[::-1]
     sorted_names = [feature_names[i] for i in order]
-    sorted_values = [importances[i] for i in order]
+    sorted_values = [importances[i] * 100.0 for i in order]
 
     fig, ax = plt.subplots(figsize=figsize)
-    bar_colors = [COLOR_RED if i == 0 else COLOR_BLUE for i in range(len(sorted_names))]
+    bar_colors = [COLOR_DARK if i == 0 else COLOR_LIGHT for i in range(len(sorted_names))]
     ax.barh(
         range(len(sorted_names)),
         sorted_values,
@@ -131,8 +131,7 @@ def plot_feature_importance(
     ax.set_yticks(range(len(sorted_names)))
     ax.set_yticklabels(sorted_names)
     ax.invert_yaxis()
-    ax.set_xlabel("Feature importance")
-    ax.set_ylabel("Input variable")
+    ax.set_xlabel("Feature Importance [%]")
     ax.set_xlim(0.0, xlim_max)
 
     fig.tight_layout()
@@ -177,8 +176,8 @@ def plot_boxplot_feature_target(
         capprops={"color": "black", "linewidth": 0.8},
         flierprops={
             "marker": "o",
-            "markerfacecolor": COLOR_RED,
-            "markeredgecolor": COLOR_RED,
+            "markerfacecolor": COLOR_DARK,
+            "markeredgecolor": COLOR_DARK,
             "markersize": 4,
             "linestyle": "none",
         },

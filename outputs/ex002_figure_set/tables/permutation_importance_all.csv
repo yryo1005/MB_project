@@ -1,0 +1,19 @@
+,Target,Feature,Permutation importance (RMSE increase)
+0,MB concentration [particles/mL],Discharge tube [m],0.4270445986425841
+1,MB concentration [particles/mL],Flow speed (oxygen) [mL/min],0.031667738218904104
+2,MB concentration [particles/mL],Dissolution pressure [MPa],0.026418901029084358
+3,MB concentration [particles/mL],Flow speed (water) [mL/min],0.01451471961377312
+4,MB concentration [particles/mL],Dissolve tube [m],0.0032906260035927533
+5,MB concentration [particles/mL],Water volume [mL],-0.006230235925049292
+6,UFB concentration [×10^7 particles/mL],Water volume [mL],0.09114997670806176
+7,UFB concentration [×10^7 particles/mL],Discharge tube [m],0.0844443394336763
+8,UFB concentration [×10^7 particles/mL],Flow speed (oxygen) [mL/min],0.06925007487017824
+9,UFB concentration [×10^7 particles/mL],Flow speed (water) [mL/min],0.06624216758642751
+10,UFB concentration [×10^7 particles/mL],Dissolution pressure [MPa],0.04987970049358288
+11,UFB concentration [×10^7 particles/mL],Dissolve tube [m],-0.0033311819805586966
+12,Oxygen content [mg/L],Discharge tube [m],0.5486468364699314
+13,Oxygen content [mg/L],Dissolve tube [m],0.01879507126340819
+14,Oxygen content [mg/L],Flow speed (oxygen) [mL/min],0.007782955743478837
+15,Oxygen content [mg/L],Water volume [mL],0.005131966394035154
+16,Oxygen content [mg/L],Dissolution pressure [MPa],-0.0015866721267078058
+17,Oxygen content [mg/L],Flow speed (water) [mL/min],-0.004418597466917127

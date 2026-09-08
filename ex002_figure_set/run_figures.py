@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 import pandas as pd
@@ -28,6 +29,26 @@ CSV_PATH = PROJECT_ROOT / "MB_data_v4.csv"
 OUTPUT_DIR = PROJECT_ROOT / "outputs" / "ex002_figure_set"
 FIGURE_DIR = OUTPUT_DIR / "figures"
 TABLE_DIR = OUTPUT_DIR / "tables"
+
+# 相関係数の図における横軸（目的変数）の短縮ラベル
+CORRELATION_TARGET_SHORT_LABELS = {
+    "MB concentration [particles/mL]": "MB conc.",
+    "UFB concentration [×10^7 particles/mL]": "UFB conc.",
+    "Oxygen content [mg/L]": "Oxygen cont.",
+}
+
+
+def _strip_unit(label: str) -> str:
+    """ラベル末尾の単位表記（例: ` [mL]`）を取り除く．"""
+    return re.sub(r"\s*\[.*?\]\s*$", "", label).strip()
+
+
+def _build_correlation_display_df(corr_df: pd.DataFrame) -> pd.DataFrame:
+    """図表示用に，単位を除去し目的変数名を短縮した相関係数 DataFrame を作成する．"""
+    return corr_df.rename(
+        index=_strip_unit,
+        columns=lambda name: CORRELATION_TARGET_SHORT_LABELS.get(name, _strip_unit(name)),
+    )
 
 
 def _slugify(name: str) -> str:
@@ -70,7 +91,8 @@ def main() -> None:
     )
     _save_csv(corr_df, TABLE_DIR / "input_target_correlation.csv")
     save_table_markdown(corr_df, TABLE_DIR / "input_target_correlation.md")
-    plot_correlation_heatmap(corr_df, FIGURE_DIR / "correlation_input_target.png")
+    corr_display_df = _build_correlation_display_df(corr_df)
+    plot_correlation_heatmap(corr_display_df, FIGURE_DIR / "correlation_input_target.png")
 
     # 3. Model training / evaluation
     results = run_all_targets(
@@ -104,7 +126,7 @@ def main() -> None:
             importances,
             feature_names,
             FIGURE_DIR / f"feature_importance_{slug}.png",
-            xlim_max=1.0,
+            xlim_max=100.0,
         )
 
         top_idx = int(importances.argmax())

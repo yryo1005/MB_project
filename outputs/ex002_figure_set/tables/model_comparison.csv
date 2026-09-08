@@ -1,0 +1,10 @@
+,Target,Model,Train RMSE,Test RMSE
+0,MB concentration [particles/mL],Linear regression,0.8652659710062908,0.9359893080408653
+1,MB concentration [particles/mL],Polynomial regression,0.5223691079292454,0.7553601605442773
+2,MB concentration [particles/mL],Random Forest,0.3802247789081622,0.6418303248091848
+3,UFB concentration [×10^7 particles/mL],Linear regression,0.8440752776962517,0.9562973163739079
+4,UFB concentration [×10^7 particles/mL],Polynomial regression,0.6946572994724514,1.1680238037310167
+5,UFB concentration [×10^7 particles/mL],Random Forest,0.6184300400843092,0.8854528322579659
+6,Oxygen content [mg/L],Linear regression,0.6753526948980495,0.7497759173987004
+7,Oxygen content [mg/L],Polynomial regression,0.5094684221031804,0.7915428539169124
+8,Oxygen content [mg/L],Random Forest,0.46119780508513186,0.6836997676955668

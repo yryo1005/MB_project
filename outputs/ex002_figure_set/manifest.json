@@ -1,0 +1,26 @@
+{
+  "csv_path": "/home/user/workspace/MB_project/MB_data_v4.csv",
+  "output_dir": "/home/user/workspace/MB_project/outputs/ex002_figure_set",
+  "target_names": [
+    "MB concentration [particles/mL]",
+    "UFB concentration [×10^7 particles/mL]",
+    "Oxygen content [mg/L]"
+  ],
+  "boxplot_manifest": [
+    {
+      "target": "MB concentration [particles/mL]",
+      "top_feature": "Discharge tube [m]",
+      "importance": 0.619080189687282
+    },
+    {
+      "target": "UFB concentration [×10^7 particles/mL]",
+      "top_feature": "Discharge tube [m]",
+      "importance": 0.24696897536120838
+    },
+    {
+      "target": "Oxygen content [mg/L]",
+      "top_feature": "Discharge tube [m]",
+      "importance": 0.767749595125449
+    }
+  ]
+}

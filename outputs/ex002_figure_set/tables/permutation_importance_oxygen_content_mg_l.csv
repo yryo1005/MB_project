@@ -1,0 +1,7 @@
+Feature,Permutation importance (RMSE increase)
+Discharge tube [m],0.5486468364699314
+Dissolve tube [m],0.01879507126340819
+Flow speed (oxygen) [mL/min],0.007782955743478837
+Water volume [mL],0.005131966394035154
+Dissolution pressure [MPa],-0.0015866721267078058
+Flow speed (water) [mL/min],-0.004418597466917127

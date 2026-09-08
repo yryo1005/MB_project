@@ -1,4 +1,3 @@
-outputs/
 datasets/
 .env_*/
 tokens.json
@@ -6,3 +5,4 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 .DS_Store
+tokens.json
