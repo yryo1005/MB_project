@@ -6,3 +6,12 @@ __pycache__/
 .ipynb_checkpoints/
 .DS_Store
 tokens.json
+
+# LaTeX build artifacts
+*.aux
+*.dvi
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.out

@@ -1,0 +1,28 @@
+\subsection{考察}
+\label{sec_discussion}
+
+表\ref{tab_rmse}に示した通り，Random Forest は 3 つの目的変数すべてにおいて線形回帰および多項式回帰よりも低い Test RMSE を示した．
+この要因として，第一に，図\ref{fig_box}(A) に示した MB 濃度と Discharge tube の関係が挙げられる．
+MB 濃度は Discharge tube が $ 0.7\,\mathrm{m} $ で最も高く，$ 2.0\,\mathrm{m} $ で低下した後，$ 4.0\,\mathrm{m} $，$ 5.0\,\mathrm{m} $ にかけて再び上昇する非単調な関係を示しており，このような関係は 1 次の項のみからなる線形回帰では表現できない．
+Random Forest は決定木の分岐によって説明変数の値の範囲ごとに異なる予測値を割り当てることができるため，非単調な関係であっても近似が可能である．
+
+第二に，多項式回帰は説明変数を 2 次まで拡張することで曲線的な関係をある程度表現できるものの，表\ref{tab_rmse}で確認した通り UFB 濃度において著しい過学習を示した．
+これは，2 次の項および交互作用項への拡張によりパラメータ数が増加した結果，82 サンプルという限られたデータ数に対してモデルの表現力が過剰となったためと考えられる．
+一方，Random Forest は決定木の最大深さを 5 に制限した上で 100 本の決定木の予測を平均するため，個々の決定木の過学習が緩和され，Train RMSE と Test RMSE の乖離が 3 つのモデルの中で最も小さく抑えられている．
+以上より，操作条件と FB 物性値の関係が非線形かつ非単調であり，かつサンプル数が限られる本データセットにおいて，過学習を抑制しつつ非線形な関係を近似できる Random Forest が最も高い予測性能を示したと考えられる．
+
+図\ref{fig_fi}および図\ref{fig_box}から，Discharge tube と目的変数の関係についてそれぞれ異なる特徴が読み取れる．
+
+図\ref{fig_fi}(C)から，酸素含量は Discharge tube に対する Feature Importance が 3 つの目的変数中最も高い（約 $ 77\,\% $）ことがわかる．
+図\ref{fig_box}(C)からも，Discharge tube の増加に伴って中央値が単調に上昇しており，相関係数（$ r = 0.65 $）とも整合する明確な単調増加の関係を示している．
+このことから，酸素含量は Discharge tube という単一の操作条件によって説明できる度合いが高い目的変数であるといえる．
+
+図\ref{fig_fi}(A)から，MB 濃度も Discharge tube の Feature Importance が高い（約 $ 62\,\% $）ことがわかるが，図\ref{fig_box}(A)に示した通り，Discharge tube との関係は単調ではなく，短い Discharge tube（$ 0.7\,\mathrm{m} $）と長い Discharge tube（$ 4.0$，$ 5.0\,\mathrm{m} $）の双方で分布が高い側に位置する．
+相関係数（$ r = -0.46 $）が中程度の負の値にとどまっているにもかかわらず Feature Importance が高いのは，Feature Importance が線形な関係だけでなく非線形な関係も捉えられるためであり，MB 濃度と Discharge tube の間には線形相関では捉えきれない非単調な関係が存在することを示唆している．
+
+これに対し，図\ref{fig_fi}(B)から，UFB 濃度は Discharge tube の Feature Importance が最も高いものの，Water volume，Flow speed (oxygen)，Dissolution pressure の Feature Importance も同程度の水準にあり，単一の説明変数に支配されないことがわかる．
+この傾向は，\ref{sec_condition}節で述べた通り，各説明変数と UFB 濃度の相関係数がいずれも $ |r| \leq 0.4 $ 程度にとどまり，突出して大きい相関を示す説明変数が存在しないこととも整合する．
+また，図\ref{fig_box}(B)においても，Discharge tube の各水準間で中央値に明確な傾向はみられず，特に $ 5.0\,\mathrm{m} $ で分布の広がりが大きくなっている．
+以上のことから，UFB 濃度は Discharge tube 単独ではなく，複数の操作条件が複合的に影響することで決定される目的変数であると考えられる．
+
+このように，本研究で対象とした 3 つの目的変数は，単一の操作条件（Discharge tube）で説明できる度合いが目的変数ごとに異なっており，特に酸素含量と MB 濃度については Discharge tube が支配的な要因である一方，UFB 濃度についてはより複合的な要因分析が必要であることが示唆された．
