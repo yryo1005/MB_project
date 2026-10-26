@@ -1,0 +1,6 @@
+Size,Features,"Test RMSE (search, n_estimators=30)",Train RMSE (n_estimators=100),Test RMSE (n_estimators=100)
+1,(Flow speed (water) [mL/min]) / (Dissolution pressure [MPa]),0.8898235595995718,0.8230328679953185,0.8891142050264429
+2,Dissolution pressure [MPa] * Flow speed (oxygen) [mL/min] + Discharge tube [m] * Water volume [mL],0.8305734584629372,0.6357201964503061,0.8438402567446683
+3,Dissolution pressure [MPa] * Flow speed (oxygen) [mL/min] + (Flow speed (oxygen) [mL/min]) / (Discharge tube [m]) + Discharge tube [m] * Water volume [mL],0.8120738382858184,0.6203822313092969,0.81759173863275
+4,Dissolution pressure [MPa] * Flow speed (oxygen) [mL/min] + (Flow speed (oxygen) [mL/min]) / (Discharge tube [m]) + Discharge tube [m] * Water volume [mL] + (Flow speed (oxygen) [mL/min]) / (Dissolve tube [m]),0.8094660141872065,0.6176624647816555,0.8106534472294948
+5,Dissolution pressure [MPa] * Flow speed (oxygen) [mL/min] + (Flow speed (oxygen) [mL/min]) / (Discharge tube [m]) + Discharge tube [m] * Water volume [mL] + (Flow speed (water) [mL/min]) / (Flow speed (oxygen) [mL/min]) + (Flow speed (oxygen) [mL/min]) / (Flow speed (water) [mL/min]),0.8067056094632281,0.6207981199208437,0.8143995883180194

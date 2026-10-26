@@ -1,0 +1,58 @@
+Feature,Kind,Feature importance (MDI)
+Dissolution pressure [MPa] * Flow speed (oxygen) [mL/min],product,0.12187166683892019
+(Flow speed (oxygen) [mL/min]) / (Discharge tube [m]),ratio,0.0809384013793247
+(Dissolution pressure [MPa]) / (Water volume [mL]),ratio,0.07652335006604404
+(Discharge tube [m]) / (Flow speed (oxygen) [mL/min]),ratio,0.06610331670917448
+(Water volume [mL]) / (Dissolution pressure [MPa]),ratio,0.054566153543543175
+Discharge tube [m] * Flow speed (water) [mL/min],product,0.05240776195802714
+Discharge tube [m] * Water volume [mL],product,0.05033769678527169
+(Dissolution pressure [MPa]) / (Flow speed (water) [mL/min]),ratio,0.03719088943343292
+Discharge tube [m] * Flow speed (oxygen) [mL/min],product,0.03668648827503916
+(Flow speed (water) [mL/min]) / (Dissolution pressure [MPa]),ratio,0.035319481783693596
+Dissolution pressure [MPa] * Discharge tube [m],product,0.03383116723837149
+(Discharge tube [m]) / (Water volume [mL]),ratio,0.02923887527869723
+(Water volume [mL]) / (Discharge tube [m]),ratio,0.025898900179027885
+(Discharge tube [m]) / (Dissolution pressure [MPa]),ratio,0.019931296281050948
+(Flow speed (water) [mL/min]) / (Water volume [mL]),ratio,0.019324083291953252
+Dissolve tube [m] * Discharge tube [m],product,0.016328386849658885
+(Flow speed (oxygen) [mL/min]) / (Dissolution pressure [MPa]),ratio,0.015208371777941663
+(Water volume [mL]) / (Flow speed (water) [mL/min]),ratio,0.01505983760603773
+(Dissolution pressure [MPa]) / (Flow speed (oxygen) [mL/min]),ratio,0.014440392640611532
+(Flow speed (oxygen) [mL/min]) / (Water volume [mL]),ratio,0.014221006570660794
+(Dissolution pressure [MPa]) / (Discharge tube [m]),ratio,0.012993526361508584
+(Flow speed (water) [mL/min]) / (Discharge tube [m]),ratio,0.01279742048937622
+(Water volume [mL]) / (Flow speed (oxygen) [mL/min]),ratio,0.011734435446132608
+(Discharge tube [m]) / (Flow speed (water) [mL/min]),ratio,0.011158799940307636
+Flow speed (water) [mL/min] * Water volume [mL],product,0.010330177650586067
+Dissolution pressure [MPa] * Flow speed (water) [mL/min],product,0.009848877349027844
+Flow speed (oxygen) [mL/min] * Water volume [mL],product,0.007620752378720027
+Dissolve tube [m] * Flow speed (water) [mL/min],product,0.007618680254262355
+(Dissolve tube [m]) / (Water volume [mL]),ratio,0.007093222788455344
+1 / (Water volume [mL]),reciprocal,0.00665188676887808
+Dissolution pressure [MPa] * Water volume [mL],product,0.0059534514382946924
+Water volume [mL],base,0.005725973361083108
+Dissolve tube [m] * Water volume [mL],product,0.00554014524386756
+(Dissolve tube [m]) / (Discharge tube [m]),ratio,0.005307175215321132
+(Discharge tube [m]) / (Dissolve tube [m]),ratio,0.005095216954959531
+(Water volume [mL]) / (Dissolve tube [m]),ratio,0.00481897236087827
+(Dissolution pressure [MPa]) / (Dissolve tube [m]),ratio,0.004731810116746282
+(Flow speed (oxygen) [mL/min]) / (Dissolve tube [m]),ratio,0.004656452544658326
+(Dissolve tube [m]) / (Flow speed (water) [mL/min]),ratio,0.0044516891318969335
+(Flow speed (water) [mL/min]) / (Dissolve tube [m]),ratio,0.00431120906197424
+(Dissolve tube [m]) / (Dissolution pressure [MPa]),ratio,0.004289391160980527
+(Dissolve tube [m]) / (Flow speed (oxygen) [mL/min]),ratio,0.004111171276091183
+1 / (Discharge tube [m]),reciprocal,0.004001474580041848
+Dissolve tube [m] * Flow speed (oxygen) [mL/min],product,0.003764924855891437
+(Flow speed (water) [mL/min]) / (Flow speed (oxygen) [mL/min]),ratio,0.0031482356537082465
+1 / (Flow speed (water) [mL/min]),reciprocal,0.0021030807799993292
+Dissolve tube [m] * Dissolution pressure [MPa],product,0.0019598755788302292
+(Flow speed (oxygen) [mL/min]) / (Flow speed (water) [mL/min]),ratio,0.001924041566548643
+1 / (Dissolution pressure [MPa]),reciprocal,0.0019221435125668924
+Discharge tube [m],base,0.0017911947044446136
+Dissolution pressure [MPa],base,0.0017865112525874125
+Flow speed (oxygen) [mL/min],base,0.0017620736098671532
+1 / (Flow speed (oxygen) [mL/min]),reciprocal,0.0013504206666387602
+Flow speed (water) [mL/min],base,0.0012605590399116236
+Flow speed (oxygen) [mL/min] * Flow speed (water) [mL/min],product,0.0005525541054239526
+Dissolve tube [m],base,0.0002432825782058563
+1 / (Dissolve tube [m]),reciprocal,0.00016166573484500257

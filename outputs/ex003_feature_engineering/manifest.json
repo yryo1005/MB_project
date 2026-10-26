@@ -1,0 +1,14 @@
+{
+  "csv_path": "/home/user/workspace/MB_project/MB_data_v4.csv",
+  "output_dir": "/home/user/workspace/MB_project/outputs/ex003_feature_engineering",
+  "n_base_features": 6,
+  "n_combined_features": 57,
+  "baseline_test_rmse": 0.8854528322579659,
+  "expanded_test_rmse": 0.9183601416005491,
+  "base_plus_top1_test_rmse": 0.8939732188560182,
+  "top1_only_test_rmse": 0.9042258432671272,
+  "top_mdi_feature": "Dissolution pressure [MPa] * Flow speed (oxygen) [mL/min]",
+  "top_mdi_kind": "product",
+  "top_engineered_feature_by_permutation": "Dissolution pressure [MPa] * Flow speed (oxygen) [mL/min]",
+  "top_engineered_feature_permutation_importance": 0.04223916878101318
+}

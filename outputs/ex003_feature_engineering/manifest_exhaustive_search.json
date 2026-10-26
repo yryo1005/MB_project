@@ -1,0 +1,34 @@
+{
+  "candidate_pool_size": 15,
+  "candidate_pool": [
+    "Dissolution pressure [MPa] * Flow speed (oxygen) [mL/min]",
+    "(Flow speed (oxygen) [mL/min]) / (Discharge tube [m])",
+    "(Flow speed (water) [mL/min]) / (Dissolution pressure [MPa])",
+    "(Dissolution pressure [MPa]) / (Flow speed (water) [mL/min])",
+    "Discharge tube [m] * Water volume [mL]",
+    "Discharge tube [m] * Flow speed (oxygen) [mL/min]",
+    "(Dissolve tube [m]) / (Flow speed (oxygen) [mL/min])",
+    "(Flow speed (water) [mL/min]) / (Flow speed (oxygen) [mL/min])",
+    "(Flow speed (water) [mL/min]) / (Dissolve tube [m])",
+    "(Dissolve tube [m]) / (Flow speed (water) [mL/min])",
+    "(Water volume [mL]) / (Flow speed (water) [mL/min])",
+    "(Discharge tube [m]) / (Flow speed (oxygen) [mL/min])",
+    "Water volume [mL]",
+    "(Flow speed (oxygen) [mL/min]) / (Dissolve tube [m])",
+    "(Flow speed (oxygen) [mL/min]) / (Flow speed (water) [mL/min])"
+  ],
+  "max_subset_size": 5,
+  "n_subsets_evaluated": 4943,
+  "search_elapsed_seconds": 560.8139750957489,
+  "baseline_test_rmse": 0.8854528322579659,
+  "previous_greedy_best_test_rmse": 0.8442446670645374,
+  "global_best_size": 4,
+  "global_best_features": [
+    "Dissolution pressure [MPa] * Flow speed (oxygen) [mL/min]",
+    "(Flow speed (oxygen) [mL/min]) / (Discharge tube [m])",
+    "Discharge tube [m] * Water volume [mL]",
+    "(Flow speed (oxygen) [mL/min]) / (Dissolve tube [m])"
+  ],
+  "global_best_test_rmse": 0.8106534472294948,
+  "improved_over_greedy": true
+}

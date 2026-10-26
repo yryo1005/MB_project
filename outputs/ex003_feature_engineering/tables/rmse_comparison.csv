@@ -1,0 +1,5 @@
+Feature set,Train RMSE,Test RMSE
+Base (6 features),0.6184300400843092,0.8854528322579659
+Base + Engineered (57 features),0.6118162139830228,0.9183601416005491
+Base + Top-1 engineered feature (7 features),0.6260540266865388,0.8939732188560182
+Top-1 engineered feature only (1 feature),0.8248681471598889,0.9042258432671272

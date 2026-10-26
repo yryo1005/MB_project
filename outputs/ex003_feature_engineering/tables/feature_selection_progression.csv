@@ -1,0 +1,16 @@
+Step,Added feature,Kind,n_features,Train RMSE,Test RMSE,Test RMSE < baseline
+1,Dissolution pressure [MPa] * Flow speed (oxygen) [mL/min],product,1,0.8248681471598889,0.9042258432671272,False
+2,(Flow speed (oxygen) [mL/min]) / (Discharge tube [m]),ratio,2,0.7175015529439615,0.9086812351654047,False
+3,(Flow speed (water) [mL/min]) / (Dissolution pressure [MPa]),ratio,3,0.7146016659843687,0.9117273524286855,False
+4,Discharge tube [m] * Water volume [mL],product,4,0.6187506828655603,0.8442446670645374,True
+5,Discharge tube [m] * Flow speed (oxygen) [mL/min],product,5,0.6188146003095611,0.873099896982106,True
+6,(Dissolve tube [m]) / (Flow speed (oxygen) [mL/min]),ratio,6,0.6148476445202755,0.8798386928047318,True
+7,(Flow speed (water) [mL/min]) / (Flow speed (oxygen) [mL/min]),ratio,7,0.614707151131601,0.8783086442404224,True
+8,(Flow speed (water) [mL/min]) / (Dissolve tube [m]),ratio,8,0.613410988904981,0.8810382411400457,True
+9,(Water volume [mL]) / (Flow speed (water) [mL/min]),ratio,9,0.6122372292279008,0.8793369015785639,True
+10,(Discharge tube [m]) / (Flow speed (oxygen) [mL/min]),ratio,10,0.6123730794599386,0.8771796671499722,True
+11,Water volume [mL],base,11,0.6120914975442864,0.8793220841847091,True
+12,Dissolution pressure [MPa],base,12,0.6117230537763106,0.8792493026538871,True
+13,(Dissolution pressure [MPa]) / (Water volume [mL]),ratio,13,0.6142059454814077,0.8698039940172633,True
+14,(Dissolution pressure [MPa]) / (Dissolve tube [m]),ratio,14,0.6140944105410828,0.8797800495162482,True
+15,(Flow speed (water) [mL/min]) / (Discharge tube [m]),ratio,15,0.6142437852990058,0.8893472940579488,False

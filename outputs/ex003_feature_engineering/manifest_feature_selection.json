@@ -1,0 +1,17 @@
+{
+  "correlation_threshold": 0.8,
+  "max_selected_features": 15,
+  "n_candidates_scanned": 37,
+  "n_selected": 15,
+  "n_skipped_redundant": 22,
+  "baseline_test_rmse": 0.8854528322579659,
+  "best_n_features": 4,
+  "best_test_rmse": 0.8442446670645374,
+  "best_test_rmse_below_baseline": true,
+  "selected_features_up_to_best": [
+    "Dissolution pressure [MPa] * Flow speed (oxygen) [mL/min]",
+    "(Flow speed (oxygen) [mL/min]) / (Discharge tube [m])",
+    "(Flow speed (water) [mL/min]) / (Dissolution pressure [MPa])",
+    "Discharge tube [m] * Water volume [mL]"
+  ]
+}
